@@ -19,6 +19,11 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Config Prepros files to ignore
+prepros.cfg
+prepros-6.config
+prepros.config
+
 # nyc test coverage
 .nyc_output
 

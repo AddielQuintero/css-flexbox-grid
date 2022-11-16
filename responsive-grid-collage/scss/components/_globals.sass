@@ -1,0 +1,94 @@
+$color-primary: #eff5f5
+$color-secondary: #aebdca
+$color-light: #d6e4e5
+
+body
+  background-color: $color-primary
+
+
+.Collage
+  min-height: 100vh
+  padding: 0 2rem
+  @include display-grid
+  @include grid-template-columns(100%)
+  @include grid-template-rows(grid-repeat(7, auto))
+
+  &__title
+    text-align: center
+    margin-bottom: 1rem
+    order: 0
+
+  &__textTop
+    order: 1
+
+  &__textCenter
+    order: 3
+
+
+  &__textBottom
+    order: 5
+
+
+  &__imageTop
+    order: -1
+
+
+  &__imageCenter
+    order: 2
+
+
+  &__imageBottom
+    order: 4
+
+  @include media(desktop-s)
+    padding: 0 1rem
+    gap: 0.3rem
+    @include grid-template-rows(grid-repeat(8, minmax(1rem, auto)))
+    @include grid-template-columns(grid-repeat(6, 1fr))
+    &__title
+      background-color: $color-secondary
+      @include grid-row(1, 9)
+      @include grid-column(1, 2)
+
+    &__textTop
+      background-color: $color-light
+      @include grid-row(1, 3)
+      @include grid-column(2, 6)
+
+
+    &__textCenter
+      background-color: $color-light
+      @include grid-row(4, 6)
+      @include grid-column(2, 4)
+
+
+    &__textBottom
+      background-color: $color-light
+      @include grid-row(7, 9)
+      @include grid-column(2, 6)
+
+
+    &__imageTop
+      background: $color-light
+      @include grid-row(3, 5)
+      @include grid-column(5, 7)
+
+
+    &__imageCenter
+      background: $color-light
+      opacity: 0.8
+      z-index: 1
+      @include grid-row(4, 6)
+      @include grid-column(4, 6)
+
+
+    &__imageBottom
+      background: $color-light
+      @include grid-row(5, 7)
+      @include grid-column(5, 7)
+
+
+.Layout-title
+  padding: 0 1rem
+  margin: 1rem 0
+
